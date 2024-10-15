@@ -1,0 +1,42 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	var numbers [6]int
+	var sumEven int
+	var countOdd int
+
+	fmt.Println("Digite 6 numeros inteiros: ")
+
+	for i := 0; i < 6; i++ {
+		fmt.Scan(&numbers[i])
+	}
+
+	fmt.Println("Numeros pares digitados:")
+
+	for _, num := range numbers {
+		if num%2 == 0 {
+			fmt.Print(num, " ")
+			sumEven += num
+		}
+	}
+
+	fmt.Println()
+
+	fmt.Println("Soma dos numeros pares:", sumEven)
+
+	fmt.Println("Numeros impares digitados: ")
+
+	for _, num := range numbers {
+		if num%2 != 0 {
+			fmt.Print(num, " ")
+			countOdd++
+		}
+	}
+
+	fmt.Println()
+	fmt.Println("Quantidade de numeros impares:", countOdd)
+}
